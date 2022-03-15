@@ -8,3 +8,5 @@ fs.writeFile('write.txt', 'write infomation', function(err){
     if(err) throw err;
     console.log("write success");
 });
+
+// 相对路径

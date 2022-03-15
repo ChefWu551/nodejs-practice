@@ -44,3 +44,23 @@ const fs = require("fs"); // 引入fs模块
 fs.readFile('path/to/file', 'utf-8', function(err, data) {})
 ```
 
+- nodejs相对路径和绝对路径
+
+  ```
+  path>of>excuse> node xx.js
+  // 如果xx.js引用了其他文件，且用的是相对目录，则对应的绝对路径是当前执行node所在的文件夹的路径，且拼接js文件指向的文件路径
+  // 解决相对路径导致文件找不到问题，使用__dirname变量，代表文件所属目录
+  console.log(__dirname)
+  ```
+
+### 2.2. path模块
+
+- path.join() // 路径拼接
+
+- Path.baseName() // 获取文件路径的文件名
+
+  例如： /a/b/c.html 通过baseName可以获取c.html
+
+  使用 path.baseName(path, '.html') 可以直接返回文件名称 c
+
+- Path.extname() // 获取文件拓展名
